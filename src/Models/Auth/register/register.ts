@@ -71,7 +71,8 @@ export const register = async (body: Body) => {
           userId: insertResult.insertedId.toHexString(),
           username,
         },
-        jwtSecret
+        jwtSecret,
+        { expiresIn: '1h' }
       );
     }
 

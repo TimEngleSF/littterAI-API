@@ -8,7 +8,7 @@ if (!jwtSecret) {
   throw new Error('jwtSecret must be defined');
 }
 
-interface RequestWithUser extends Request {
+export interface RequestWithUser extends Request {
   user?: jwt.JwtPayload;
 }
 

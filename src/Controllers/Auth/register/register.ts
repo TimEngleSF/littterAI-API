@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { registerSchema } from './bodySchema';
+import { registerSchema } from './registerReqSchema';
 import { logError } from '../../../Errors/logError';
 import Models from '../../../Models';
 
