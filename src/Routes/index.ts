@@ -1,6 +1,9 @@
-import authRouter from './authRouter';
-
+import authRoutes from './authRoutes';
+import leaderboardRoutes from './leaderboardRoutes';
+import photoInfoRoutes from './photoInfoRoutes';
 const routes = {
-  authRouter,
+  leaderboardRoutes,
+  authRoutes,
+  photoInfoRoutes,
 };
 export default routes;

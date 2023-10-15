@@ -28,4 +28,4 @@ const getCollection = async (
 
 export const getUsersCollection = () => getCollection('users');
 export const getCatCountCollection = () => getCollection('userCategoryCount');
-export const getInfoCollection = () => getCollection('uploads');
+export const getUploadInfoCollection = () => getCollection('uploads');

@@ -17,10 +17,13 @@ const startServer = async () => {
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
 
-    app.use('/', routes.authRouter);
+    app.use('/', routes.authRoutes);
+
+    app.use('/leaderboard', routes.leaderboardRoutes);
 
     app.use(isAuth);
     //  Place routes that require authorization below
+    app.use('/photoInfo', routes.photoInfoRoutes);
 
     app.listen(PORT, () => {
       console.log(
