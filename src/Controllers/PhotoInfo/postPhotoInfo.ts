@@ -32,5 +32,14 @@ export const postPhotoInfo = async (req: RequestWithUser, res: Response) => {
       req.body.category
     );
     res.status(code).send(data);
-  } catch (error) {}
+  } catch (error: any) {
+    console.log(error);
+    res
+      .status(500)
+      .send({ message: 'An error occurred while processing your request.' });
+    await logError(
+      error,
+      'Error occured while executing addPhoto in Models/PhotoInfo/addPhoto'
+    );
+  }
 };
