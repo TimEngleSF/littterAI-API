@@ -39,10 +39,6 @@ JSON Request body should follow
 
 **POST** `/login`
 
-Include user's JWT in an authorization header
-
-`Authorization: Bearer <token>`
-
 JSON Request body should follow
 
 ```
