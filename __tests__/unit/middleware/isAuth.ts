@@ -49,7 +49,7 @@ describe('isAuth Middleware', () => {
     isAuth(mockRequest, mockResponse, mockNext);
 
     expect(mockResponse.status).toHaveBeenCalledWith(401);
-    expect(mockResponse.json).toHaveBeenCalledWith({ msg: 'Unauthorized' });
+    expect(mockResponse.send).toHaveBeenCalledWith({ message: 'Unauthorized' });
   });
 
   it('should proceed to next middleware if JWT is valid', () => {
